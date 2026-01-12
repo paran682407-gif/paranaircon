@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/* =========================== 새로운 컴포넌트 스타일 */
+/* Sub Page Banner Component */
+.sub-page-banner-component{display:flex;align-items:center;justify-content:center;position:relative;height:500px;margin:0 auto;background:url('../img/sub/sub_banner_bg.jpg') center no-repeat;background-size:cover}
+.sub-page-banner-component::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4);z-index:1}
+.sub-page-banner-component .banner-content{position:relative;z-index:2;padding-top:40px;color:#fff;text-align:center;font-family:'Pretendard'}
+.sub-page-banner-component .page-title{position:relative;z-index:2}
+.sub-page-banner-component .banner-content p{margin-bottom:20px;font-size:46px;font-weight:700}
+.sub-page-banner-component .banner-content div{display:flex;justify-content:center;align-items:center;font-size:16px;font-weight:500}
+.sub-page-banner-component .banner-content div a{padding-top:3px}
+.sub-page-banner-component .banner-content div svg{fill:#fff}
+.sub-page-banner-component .banner-content div i{margin:0 20px;font-size:14px}
+.sub-page-banner-component .page-title{display:none}
+
+/* Sidebar Component */
+.sidebar-component{display:flex;justify-content:center;margin:0 auto 50px;background:#28437C}
+.sidebar-component li+li{border-left:1px solid rgba(255,255,255,.15)}
+.sidebar-component li a{display:block;min-width:160px;height:62px;padding:0 20px;font-size:17px;font-weight:500;line-height:62px;text-align:center;color:#fff;font-family:'pretendard'}
+.sidebar-component li.active a{font-weight:600;color:#28437C;background:#fff}
+
+/* Main Content Component */
+.main-content-component{font-size:15px;font-weight:400;line-height:1.8;letter-spacing:-.2px;color:#777;font-family:'Noto Sans KR'}
+
+/* Company Introduction Component */
+.company-intro-component .intro-title{padding:0 0 40px 5%;font-size:38px;font-weight:100;line-height:1.35;letter-spacing:-.5px;color:#222}
+.company-intro-component .intro-title p{font-weight:600}
+.company-intro-component .intro-image{height:420px;background:url(../img/sub/sub1_company_intro.jpg) center no-repeat;background-size:cover}
+.company-intro-component .intro-content{padding:40px 0 0 25%}
+.company-intro-component .intro-content .intro-description{white-space:pre-line}
+.company-intro-component .intro-content .intro-signature{margin-top:30px;font-weight:500;color:#222}
+.company-intro-component .intro-content .intro-signature span{margin-left:20px;font-size:17px}
+
+/* 반응형 스타일 */
+@media (max-width:1024px){
+.sub-page-banner-component{height:300px}
+.sidebar-component{display:none}
+.main-content-component{padding:20px;font-size:14px;line-height:1.6}
+.company-intro-component .intro-title{padding:0;font-size:28px;line-height:1.4;color:#222;word-break:keep-all}
+.company-intro-component .intro-image{height:200px;margin:15px 0}
+.company-intro-component .intro-content{padding:0}
+.company-intro-component .intro-content .intro-signature{margin-top:20px}
+.company-intro-component .intro-content .intro-signature span{margin-left:0;font-size:15px}
+}
+@media (max-width:480px){
+.sub-page-banner-component{height:55px;background:none;border-bottom:1px solid #e1e1e1}
+.sub-page-banner-component .banner-content{display:none}
+.sub-page-banner-component .page-title{display:block;font-size:16px;font-weight:500}
+}
+@media (max-width:768px){
+.company-intro-component .intro-content .intro-description{white-space:normal}
+}
+
+/* =========================== SUB */
+#shSub{display:flex;align-items:center;justify-content:center;position:relative;height:500px;margin:0 auto;background:url('../img/sub/sub_banner_bg.jpg') center no-repeat;background-size:cover}
+#shSub::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4);z-index:1}
+#shSub .txt_area{position:relative;z-index:2;padding-top:40px;color:#fff;text-align:center;font-family:'Pretendard'}
+#shSub .sub_tit{position:relative;z-index:2}
+#shSub .txt_area p{margin-bottom:20px;font-size:46px;font-weight:700}
+#shSub .txt_area div{display:flex;justify-content:center;align-items:center;font-size:16px;font-weight:500}
+#shSub .txt_area div a{padding-top:3px}
+#shSub .txt_area div svg{fill:#fff}
+#shSub .txt_area div i{margin:0 20px;font-size:14px}
+#shSub .sub_tit{display:none}
+
+@media (max-width:1024px){
+#shSub{height:300px}
+}
+@media (max-width:480px){
+#shSub{height:55px;background:none;border-bottom:1px solid #e1e1e1}
+#shSub .txt_area{display:none}
+#shSub .sub_tit{display:block;font-size:16px;font-weight:500}
+}
+
+/* =========================== SNB */
+#shSnb{display:flex;justify-content:center;margin:0 auto 50px;background:var(--primary)}
+#shSnb li+li{border-left:1px solid rgba(255,255,255,.15)}
+#shSnb li a{display:block;min-width:160px;height:62px;padding:0 20px;font-size:17px;font-weight:500;line-height:62px;text-align:center;color:#fff;font-family:'pretendard'}
+#shSnb li.on a{font-weight:600;color:var(--primary);background:#fff}
+@media (max-width:1024px){
+#shSnb{display:none}
+}
+
+/* =========================== PAGE */
+#greeting{font-size:15px;font-weight:400;line-height:1.8;letter-spacing:-.2px;color:#777;font-family:'Noto Sans KR'}
+#greeting .tit_area{padding:0 0 40px 5%;font-size:38px;font-weight:100;line-height:1.35;letter-spacing:-.5px;color:#222}
+#greeting .tit_area p{font-weight:600}
+#greeting .img{height:420px;background:url(../img/sub/sub1_company_intro.jpg) center no-repeat;background-size:cover}
+#greeting .cont{padding:40px 0 0 25%}
+#greeting .cont .pl{white-space:pre-line}
+#greeting .cont .sign{margin-top:30px;font-weight:500;color:#222}
+#greeting .cont .sign span{margin-left:20px;font-size:17px}
+
+@media(max-width:1024px){
+#greeting{padding:20px;font-size:14px;line-height:1.6}
+#greeting .tit_area{padding:0;font-size:28px;line-height:1.4;color:#222;word-break:keep-all}
+#greeting .img{height:200px;margin:15px 0}
+#greeting .cont{padding:0}
+#greeting .cont .sign{margin-top:20px}
+#greeting .cont .sign span{margin-left:0;font-size:15px}
+}
+@media(max-width:768px){
+#greeting .cont .pl{white-space:normal}
+}
+@media(max-width:480px){
+#greeting{padding:15px 12px}	
+#greeting .tit_area{font-size:22px}
+}

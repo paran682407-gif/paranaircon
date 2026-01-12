@@ -1,0 +1,1363 @@
+@charset "utf-8";
+
+/* ============================================================
+   COMPONENT STYLES - Main Visual & Service Introduction
+   ============================================================ */
+
+/* Main Visual Banner */
+.main-visual {
+  letter-spacing: -0.2px;
+  width: 100%;
+  height: 723px;
+  background: linear-gradient(135deg, #1a2c4a 0%, #28437C 100%);
+}
+
+.main-visual .main-slide {
+  overflow: hidden;
+  height: 100%;
+}
+
+.main-visual ul li {
+  background: url('../img/main/main_banner01.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.main-visual ul li.bg02 {
+  background-image: url('../img/main/main_banner02.jpg');
+}
+
+.main-visual ul li.bg03 {
+  background-image: url('../img/main/main_banner03.jpg');
+}
+
+.main-visual ul li.bg04 {
+  background-image: url('../img/main/main_banner04.jpg');
+}
+
+
+/* ============================================================
+   Service Introduction Component
+   ============================================================ */
+
+.service-intro-component {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  font-family: 'GyeonggiMillenniumTitle';
+  word-break: keep-all;
+  background-color: #f4f6fb;
+  position: relative;
+}
+
+.service-intro-component .component-inner {
+  z-index: 1;
+}
+
+.service-intro-component .primary-button {
+  padding: 10px 30px;
+  font-size: 15px;
+}
+
+
+/* Greeting Component */
+.service-intro-component .greeting-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 160px;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.service-intro-component .greeting-component h2 {
+  padding-bottom: 40px;
+  font-family: 'GyeonggiMillenniumTitle';
+  font-size: 35px;
+  font-weight: 300;
+  color: #1a2c4a;
+  line-height: 1.15;
+}
+
+.service-intro-component .greeting-component h2 strong {
+  color: #28437C;
+}
+
+.service-intro-component .greeting-component .description {
+  padding-bottom: 50px;
+  font-size: 17px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.service-intro-component .greeting-component .button-group {
+  display: flex;
+  gap: 13px;
+}
+
+
+/* Service List Component */
+.service-intro-component .service-list-component {
+  display: grid;
+  grid-template-columns: auto 5fr 4fr;
+  gap: 20px 40px;
+  padding-top: 0;
+  margin-bottom: 145px;
+}
+
+.service-intro-component .service-list-component .section-title {
+  display: block;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+
+.service-intro-component .service-list-component .section-title .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  font-family: 'GyeonggiMillenniumTitle';
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #1a2c4a;
+  letter-spacing: 0;
+}
+
+/* PC 모드에서 세로 정렬 */
+@media (min-width:1025px){
+.service-intro-component .service-list-component .section-title .title {
+  writing-mode: vertical-lr;
+  padding-right: 120px;
+  letter-spacing: 5px;
+}
+
+.service-intro-component .service-list-component .service-display {
+  display: block;
+}
+}
+
+.service-intro-component .service-list-component .section-title .title img {
+  width: auto;
+  height: 20px;
+}
+
+.service-intro-component .service-list-component .service-content {
+  padding-top: 0;
+}
+
+.service-intro-component .service-list-component .service-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  counter-reset: clinic;
+}
+
+.service-intro-component .service-list-component .service-tab {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 65px;
+  padding: 15px 20px 15px 65px;
+  background-color: #e4e4e4;
+  border-radius: 8px;
+}
+
+.service-intro-component .service-list-component .service-tab::before {
+  content: counter(clinic, decimal-leading-zero);
+  counter-increment: clinic;
+  margin-top: -4px;
+  font-size: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  will-change: opacity;
+}
+
+.service-intro-component .service-list-component .service-tab .service-title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgba(26, 44, 74, 0.4);
+  transition: color 0.2s;
+  will-change: color;
+}
+
+.service-intro-component .service-list-component .service-tab .service-info {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s;
+  will-change: height;
+}
+
+.service-intro-component .service-list-component .service-tab .service-description {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(54, 47, 45, 0.7);
+}
+
+.service-intro-component .service-list-component .service-tab .more-link {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  background-color: #28437C;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.service-intro-component .service-list-component .service-tab .more-link:hover {
+  background-color: #5470b8;
+}
+
+.service-intro-component .service-list-component .service-tab .more-link:last-child {
+  margin-bottom: 0;
+}
+
+.service-intro-component .service-list-component .service-tab .service-thumbnail {
+  display: none;
+}
+
+.service-intro-component .service-list-component .service-tab.active::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.service-intro-component .service-list-component .service-tab.active {
+  background-color: #d1d5db;
+}
+
+.service-intro-component .service-list-component .service-tab.active .service-title {
+  color: #28437C;
+}
+
+.service-intro-component .service-list-component .service-tab.active .service-info {
+  height: auto;
+}
+
+.service-intro-component .service-list-component .service-display {
+  width: 100%;
+  min-height: 536px;
+  height: auto;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .service-intro-component .service-list-component .service-display {
+    min-height: 0;
+  }
+}
+
+.service-intro-component .service-list-component .tab-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.1s;
+}
+
+.service-intro-component .service-list-component .tab-content.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.service-intro-component .service-list-component .tab-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.4s;
+}
+
+.service-intro-component .service-list-component .tab-content.active img {
+  opacity: 1;
+  visibility: visible;
+}
+
+.service-intro-component .service-list-component .action-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: auto;
+}
+
+.service-intro-component .service-list-component .action-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background: linear-gradient(45deg, #28437C 0%, #5470b8 100%);
+  box-shadow: 0 4px 16px rgba(40, 67, 124, 0.3);
+}
+
+.service-intro-component .service-list-component .action-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  transition: stroke 0.2s;
+}
+
+.service-intro-component .service-list-component .action-button:hover svg {
+  stroke: #fff;
+  animation: arrow 0.6s;
+}
+
+.service-intro-component .service-list-component .action-button.active {
+  display: flex;
+}
+
+@keyframes arrow {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+
+/* CEO Introduction Component */
+.service-intro-component .ceo-intro-component {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.service-intro-component .ceo-intro-component .ceo-image .image-container {
+  overflow: hidden;
+  height: 362px;
+  border-radius: 10px;
+  background-color: #ccc;
+  background-image: url('../img/main/inc01/aircon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.service-intro-component .ceo-intro-component .ceo-content {
+  padding: 40px 85px;
+  background-color: #e4e4e4;
+  border-radius: 15px;
+  height: 362px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-intro-component .ceo-intro-component .ceo-content .ceo-message {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.36;
+  color: #333;
+  word-break: keep-all;
+}
+
+.service-intro-component .ceo-intro-component .ceo-content .ceo-description {
+  padding: 25px 0 60px;
+  font-size: 18px;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.service-intro-component .background-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.service-intro-component .background-decoration img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ============================================================
+   Case Studies Component
+   ============================================================ */
+
+.case-studies-component {
+  font-family: 'GyeonggiMillenniumTitle';
+  background-color: #f4f6fb;
+}
+
+/* Event Banner Component */
+.case-studies-component .event-banner-component .event-link {
+  display: flex;
+  min-height: 302px;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #28437C 0%, #5470b8 70%, #3d5a99 100%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  word-break: keep-all;
+  border-radius: 20px;
+  margin: 0 100px;
+}
+
+@media (max-width: 768px) {
+  .case-studies-component .event-banner-component .event-link {
+    padding: 20px;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-studies-component .event-banner-component .event-link {
+    padding: 20px;
+    margin: 0 20px;
+  }
+}
+
+.case-studies-component .event-banner-component .event-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.case-studies-component .event-banner-component .event-title {
+  padding-bottom: 30px;
+  font-size: 30px;
+  line-height: 1.16;
+  color: #fff;
+  font-weight: 500;
+  white-space: pre-line;
+}
+
+.case-studies-component .event-banner-component .event-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'GyeonggiMillenniumTitle';
+  font-weight: 300;
+}
+
+/* Case Reviews Component */
+.case-studies-component .case-reviews-component {
+  padding: 100px;
+}
+
+.case-studies-component .case-reviews-component .component-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.case-studies-component .case-reviews-component .reviews-content {
+  width: 100%;
+}
+
+.case-studies-component .case-reviews-component .section-title {
+  width: 100%;
+}
+
+.case-studies-component .case-reviews-component .review-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* PC 모드에서만 3개씩 나란히 표시 */
+@media (min-width:1025px){
+  .case-studies-component .case-reviews-component .review-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .case-studies-component .case-reviews-component .component-inner {
+    gap: 50px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link {
+    flex-direction: column;
+    padding: 0;
+    background-color: transparent;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-thumbnail {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* 중간 해상도(태블릿 ~ PC 사이): 가로 정렬 유지, 공간만 줄이기 */
+@media (min-width:1025px) and (max-width:1400px){
+  .case-studies-component .case-reviews-component .review-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .case-studies-component .case-reviews-component .component-inner {
+    gap: 30px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-item {
+    max-width: 100%;
+  }
+}
+
+.case-studies-component .case-reviews-component .review-item {
+  width: 100%;
+}
+
+.case-studies-component .case-reviews-component .review-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-studies-component .case-reviews-component .review-thumbnail {
+  width: 100%;
+  height: 273px;
+  background: #ccc;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.case-studies-component .case-reviews-component .review-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.2s;
+}
+
+.case-studies-component .case-reviews-component .review-link:hover .review-image {
+  transform: scale(1.1);
+}
+
+.case-studies-component .case-reviews-component .review-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-studies-component .case-reviews-component .review-title {
+  padding: 16px 0 20px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+
+.case-studies-component .case-reviews-component .review-details .detail-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.case-studies-component .case-reviews-component .review-details .detail-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #333;
+}
+
+.case-studies-component .case-reviews-component .review-details .detail-label::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #333;
+}
+
+
+/* ============================================================
+   RESPONSIVE STYLES
+   ============================================================ */
+
+@media (max-width: 1440px) {
+  .main-visual {
+    height: 560px;
+  }
+  
+  .service-intro-component .greeting-component {
+    margin-bottom: 100px;
+  }
+  
+  .service-intro-component .greeting-component h2 {
+    font-size: 32px;
+  }
+  
+  .service-intro-component .service-list-component {
+    padding-top: 0;
+    margin-bottom: 100px;
+  }
+  
+  .service-intro-component .service-list-component .section-title {
+    padding-top: 0;
+  }
+  
+  .service-intro-component .service-list-component .service-content {
+    flex: none;
+    flex-shrink: 0;
+    max-width: 630px;
+  }
+  
+  .service-intro-component .service-list-component .service-tab {
+    padding-left: 40px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content {
+    padding: 0 0 0 45px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content .ceo-message {
+    font-size: 24px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content .ceo-description {
+    font-size: 17px;
+  }
+  
+  .service-intro-component .background-decoration {
+    opacity: 0.3;
+  }
+  
+  .case-studies-component .event-banner-component .event-title {
+    padding-bottom: 26px;
+    font-size: 26px;
+  }
+  
+  
+  .case-studies-component .case-reviews-component .review-list {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .service-intro-component {
+    padding: 100px;
+  }
+  
+  .service-intro-component .greeting-component h2 {
+    font-size: 30px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-image .image-container {
+    background-position: center -65px;
+  }
+  
+  .service-intro-component .background-decoration {
+    opacity: 0.25;
+  }
+  
+  .case-studies-component .case-reviews-component {
+    padding: 20px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data .detail-item {
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+    word-break: keep-all;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data .detail-label {
+    gap: 10px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  .service-intro-component {
+    padding: 100px;
+  }
+  
+  .service-intro-component .primary-button {
+    padding: 7px 26px;
+  }
+  
+  .service-intro-component .greeting-component {
+    margin-bottom: 85px;
+  }
+  
+  .service-intro-component .greeting-component h2 {
+    padding-bottom: 28px;
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  
+  .service-intro-component .greeting-component .description {
+    padding-bottom: 38px;
+    font-size: 16px;
+  }
+  
+  .service-intro-component .service-list-component {
+    display: flex;
+    padding-top: 0;
+    margin-bottom: 85px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    grid-template-columns: none;
+  }
+  
+  .service-intro-component .service-list-component > *:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  
+  .service-intro-component .service-list-component > *:last-child {
+    display: none;
+    order: 999;
+    flex: 0 0 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    line-height: 0;
+    min-height: 0;
+    max-height: 0;
+  }
+  
+  .service-intro-component .service-list-component .section-title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .service-intro-component .service-list-component .section-title .title {
+    writing-mode: horizontal-tb;
+    padding-right: 0;
+    gap: 15px;
+    letter-spacing: 0;
+  }
+  
+  .service-intro-component .service-list-component .service-content {
+    padding-top: 40px;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+    margin-bottom: 0;
+  }
+  
+  .service-intro-component .service-list-component .service-display {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 0;
+    flex-basis: 0;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  .service-intro-component .service-list-component .service-tabs {
+    align-items: center;
+    gap: 22px;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-title {
+    font-weight: 300;
+  }
+  
+  .service-intro-component .service-list-component .service-tab.active .service-title {
+    font-weight: 400;
+  }
+  
+  .service-intro-component .service-list-component .service-tab::before {
+    display: none;
+  }
+  
+  .service-intro-component .service-list-component .service-tab {
+    align-items: center;
+    padding-left: 0;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-title {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-description {
+    padding-bottom: 16px;
+    text-align: center;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-info {
+    align-items: center;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .more-link {
+    margin-bottom: 25px;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-thumbnail {
+    display: block;
+    max-width: 380px;
+    margin-bottom: 15px;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-thumbnail img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .service-intro-component .service-list-component .service-display {
+    display: block;
+    max-width: 100%;
+    height: 400px;
+  }
+  
+  .service-intro-component .background-decoration {
+    right: -57px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .service-intro-component .ceo-intro-component {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-image {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-image .image-container {
+    max-width: 500px;
+    width: 100%;
+    height: 325px;
+    background-position: center -65px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content .ceo-message {
+    font-size: 22px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content .ceo-description {
+    padding: 25px 0;
+    font-size: 16px;
+  }
+  
+  .case-studies-component .event-banner-component .event-link {
+    min-height: 250px;
+  }
+  
+  .case-studies-component .event-banner-component .event-content {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .case-studies-component .event-banner-component .event-title {
+    padding-bottom: 22px;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  
+  .case-studies-component .case-reviews-component {
+    padding: 20px;
+  }
+  
+  .case-studies-component .case-reviews-component .component-inner {
+    grid-template-columns: auto 1fr;
+    gap: 0;
+  }
+}
+
+/* 746px 근처: 타이틀과 콘텐츠 나란히 배치 */
+@media (min-width:700px) and (max-width:900px){
+  .case-studies-component .case-reviews-component .component-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0;
+    align-items: start;
+  }
+  
+  .case-studies-component .case-reviews-component .section-title {
+    width: auto;
+  }
+  
+  .case-studies-component .case-reviews-component .reviews-content {
+    width: 100%;
+  }
+  
+  .case-studies-component .case-reviews-component .review-list {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .case-studies-component .case-reviews-component .component-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .case-studies-component .case-reviews-component .section-title {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  
+  .case-studies-component .case-reviews-component .section-title .title {
+    writing-mode: horizontal-tb;
+    padding-right: 0;
+    letter-spacing: 0;
+  }
+  
+  .case-studies-component .case-reviews-component .review-item {
+    max-width: none;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
+    border-radius: 15px;
+    background-color: rgba(229, 225, 215, 0.6);
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-thumbnail {
+    max-width: 345px;
+    height: 255px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-thumbnail .review-image {
+    background-position: center;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .review-title {
+    padding: 0 0 12px;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data {
+    gap: 10px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data .detail-item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-intro-component {
+    padding: 50px 20px 20px;
+  }
+  
+  .service-intro-component .primary-button {
+    font-size: 14px;
+  }
+  
+  .service-intro-component .greeting-component {
+    margin-bottom: 65px;
+  }
+  
+  .service-intro-component .greeting-component h2 {
+    padding-bottom: 24px;
+    font-size: 24px;
+  }
+  
+  .service-intro-component .greeting-component .description {
+    padding-bottom: 32px;
+    font-size: 15px;
+    white-space: normal;
+  }
+  
+  .service-intro-component .greeting-component .button-group {
+    gap: 10px;
+  }
+  
+  .service-intro-component .service-list-component {
+    display: flex;
+    margin-bottom: 65px;
+    gap: 0;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    grid-template-columns: none;
+  }
+  
+  .service-intro-component .service-list-component > *:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  
+  .service-intro-component .service-list-component .section-title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .service-intro-component .service-list-component .section-title .title {
+    writing-mode: horizontal-tb;
+    padding-right: 0;
+    gap: 10px;
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+  
+  .service-intro-component .service-list-component > *:last-child {
+    display: none;
+    order: 999;
+    flex: 0 0 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    line-height: 0;
+    min-height: 0;
+    max-height: 0;
+  }
+  
+  .service-intro-component .service-list-component .service-content {
+    padding-top: 30px;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+    margin-bottom: 0;
+  }
+  
+  .service-intro-component .service-list-component .service-tabs {
+    gap: 20px;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-title {
+    font-size: 17px;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-thumbnail {
+    max-width: 320px;
+    margin-bottom: 0px;
+  }
+  
+  .service-intro-component .service-list-component .service-display {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 0;
+    flex-basis: 0;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  .service-intro-component .ceo-intro-component {
+    gap: 30px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content .ceo-message {
+    font-size: 20px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content .ceo-description {
+    padding: 20px 0;
+    font-size: 15px;
+  }
+  
+  .service-intro-component .background-decoration {
+    display: none;
+  }
+  
+  .case-studies-component .event-banner-component .event-link {
+    min-height: 210px;
+  }
+  
+  .case-studies-component .event-banner-component .event-title {
+    padding-bottom: 18px;
+    font-size: 22px;
+  }
+  
+  .case-studies-component .case-reviews-component {
+    padding: 20px;
+  }
+  
+  .case-studies-component .case-reviews-component .component-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 35px;
+    border-radius: 10px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-thumbnail {
+    max-width: 340px;
+    height: 225px;
+    border-radius: 10px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .review-title {
+    padding: 0 0 5px;
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data {
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data .detail-item {
+    gap: 7px;
+    font-size: 15px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data .detail-label {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-visual {
+    height: 310px;
+  }
+  
+  .service-intro-component {
+    padding: 50px 20px 20px;
+  }
+  
+  .service-intro-component .greeting-component {
+    margin-bottom: 45px;
+  }
+  
+  .service-intro-component .greeting-component h2 {
+    padding-bottom: 16px;
+    font-size: 22px;
+    white-space: normal;
+  }
+  
+  .service-intro-component .greeting-component .description {
+    padding-bottom: 24px;
+  }
+  
+  .service-intro-component .greeting-component .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .service-intro-component .service-list-component {
+    margin-bottom: 45px;
+  }
+  
+  .service-intro-component .service-list-component .section-title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .service-intro-component .service-list-component .section-title .title {
+    writing-mode: horizontal-tb;
+    padding-right: 0;
+    gap: 8px;
+    font-size: 22px;
+    letter-spacing: 0;
+  }
+  
+  .service-intro-component .service-list-component .service-content {
+    padding-top: 25px;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-title {
+    font-size: 16px;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .service-intro-component .service-list-component .service-tab .service-thumbnail {
+    max-width: 280px;
+  }
+  
+  .service-intro-component .service-list-component .service-display {
+    height: 250px;
+    position: relative;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-image .image-container {
+    height: 270px;
+    background-position: center;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content .ceo-message {
+    font-size: 18px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-content .ceo-description {
+    padding: 12px 0;
+  }
+  
+  .case-studies-component .event-banner-component .event-title {
+    font-size: 20px;
+  }
+  
+  .case-studies-component .case-reviews-component {
+    padding: 20px;
+  }
+  
+  .case-studies-component .case-reviews-component .component-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link {
+    gap: 10px;
+    padding: 25px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-thumbnail {
+    max-width: 290px;
+    height: 210px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .review-title {
+    font-size: 16px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data {
+    gap: 4px;
+  }
+  
+  .case-studies-component .case-reviews-component .review-link .review-info .atc__data .detail-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .service-intro-component .greeting-component h2 {
+    font-size: 20px;
+  }
+  
+  .service-intro-component .ceo-intro-component .ceo-image .image-container {
+    height: 215px;
+  }
+}
+
+/* Action Button - Responsive */
+@media (max-width: 1024px) {
+  .service-intro-component .service-list-component .action-button {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .service-intro-component .service-list-component .action-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-intro-component .service-list-component .action-button {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .service-intro-component .service-list-component .action-button svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-intro-component .service-list-component .action-button {
+    width: 45px;
+    height: 45px;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .service-intro-component .service-list-component .action-button svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Section Title - Right Aligned for Case Studies */
+.case-studies-component .case-reviews-component .section-title {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.case-studies-component .case-reviews-component .section-title .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  font-family: 'GyeonggiMillenniumTitle';
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #1a2c4a;
+  letter-spacing: 0;
+}
+
+.case-studies-component .case-reviews-component .section-title .title img {
+  width: auto;
+  height: 20px;
+}
